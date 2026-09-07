@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noxera - Manga Okuyucu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #09070e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Üst Kontrol Barı */
+        header {
+            width: 100%;
+            padding: 15px 5%;
+            background: #130f1d;
+            border-bottom: 1px solid #282333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-btn {
+            color: #aaa3b8;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #a855f7;
+        }
+
+        .manga-title {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background: #17131f;
+            color: #fff;
+            border: 1px solid #393247;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #a855f7;
+            border-color: #a855f7;
+        }
+
+        /* Okuyucu Alanı (Görseller) */
+        .reader-container {
+            width: min(800px, 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .reader-page {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 0px; /* Dikey okumada boşluksuz birleşim */
+        }
+
+        /* Alt Navigasyon */
+        .bottom-nav {
+            margin: 40px 0;
+            display: flex;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+    
+    <div class="manga-title" id="chapterTitle">
+        Solo Leveling - Bölüm 1
+    </div>
+
+    <div class="nav-controls">
+        <a href="#" class="btn" onclick="prevChapter()">← Önceki</a>
+        <a href="#" class="btn" onclick="nextChapter()">Sonraki →</a>
+    </div>
+</header>
+
+<!-- Manga Sayfalarının Dizildiği Alan -->
+<div class="reader-container" id="pagesContainer">
+    <!-- Örnek Test Görselleri -->
+    <img class="reader-page" src="https://via.placeholder.com/800x1200/17131f/ffffff?text=Sayfa+1" alt="Sayfa 1">
+    <img class="reader-page" src="https://via.placeholder.com/800x1200/252031/ffffff?text=Sayfa+2" alt="Sayfa 2">
+    <img class="reader-page" src="https://via.placeholder.com/800x1200/17131f/ffffff?text=Sayfa+3" alt="Sayfa 3">
+</div>
+
+<div class="bottom-nav">
+    <a href="#" class="btn" onclick="prevChapter()">← Önceki Bölüm</a>
+    <a href="index.html" class="btn">Ana Sayfa</a>
+    <a href="#" class="btn" onclick="nextChapter()">Sonraki Bölüm →</a>
+</div>
+
+<script>
+    function prevChapter() {
+        alert("Önceki bölüm yükleniyor...");
+        // İleride buraya önceki bölümün linkini bağlayacağız.
+    }
+
+    function nextChapter() {
+        alert("Sonraki bölüm yükleniyor...");
+        // İleride buraya sonraki bölümün linkini bağlayacağız.
+    }
+</script>
+
+</body>
+</html>
